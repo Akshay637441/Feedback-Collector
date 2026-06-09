@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="Width=device-width, initial-scale="1.0">
+    <title>Feedback Collector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="top-right">
+        <button id="darkbotton" onclick="darkmode()">Dark Mode</button>
+    </div>
+
+    <h1>Feedback Collector</h1>
+
+    <div class="button-group">
+        <button onclick="addfeedback()">Add Feedback</button>
+        <button onclick="viewfeedback()">View or Delete Feedback</button>
+    </div>
+    
+    <div id="addsection" class="section">
+        <div class="header">
+            <h2>Add Feedback</h2>
+            <span class="close" onclick="closeaddform()">Close</span>
+        </div>
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <textarea id="message" placeholder="Write Your Feedback"></textarea>
+        <input type="number" id="rating" placeholder="Rate Your Experience (1-10)">
+        <button onclick="add()">Submit Feedback</button>
+    </div>
+
+    <div id="viewsection" class="section">
+        <div class="header">
+            <h2>All Feedbacks</h2>
+            <span class="close" onclick="closeviewform()">Close</span>
+        </div>
+        <br><br>
+        <input type="text" id="search" placeholder="Search Feedback" onkeyup="searchfeedback()">
+        <br><br>
+        <h3>Total Feedbacks :
+            <span id="count">0</span>
+        </h3>
+        <br>
+        <div id="feedbacklist"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
