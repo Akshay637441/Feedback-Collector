@@ -16,8 +16,6 @@ mongoose.connect(
     console.log("MongoDB Error:", err);
 });
 
-// Feedback Schema
-
 const feedbackSchema = new mongoose.Schema({
 
     name: {
